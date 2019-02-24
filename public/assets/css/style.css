@@ -1,0 +1,52 @@
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width: 200px;
+}
+
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+h1 {
+  text-align: center;
+}
+
+.change-devour {
+  float: right;
+  margin: 0;
+}
+
+.label {
+  font-weight: bold;
+}
+
+textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+body {
+  background-color: orange;
+}

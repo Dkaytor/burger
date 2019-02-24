@@ -1,10 +1,13 @@
 //setting up dependencies for express
 var express = require("express");
 
+//setting up port to use
 var PORT = process.env.PORT || 3000;
 
+//setting app to use as express
 var app = express();
 
+//Telling the program where the static files are
 app.use(express.static("public"));
 
 app.use(express.urlencoded({ extended: true }));
@@ -23,7 +26,6 @@ app.use(routes);
 
 
 //set up port to listen
-
 app.listen(PORT, function() {
     console.log("App listening on PORT: " + PORT);
   });

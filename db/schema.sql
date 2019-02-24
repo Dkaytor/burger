@@ -11,6 +11,7 @@ To run this file, we do the following in our Terminal:
 */
 
 -- Create the database day_planner_db and specified it for use.
+DROP DATABASE IF EXISTS burgers_db;
 CREATE DATABASE burgers_db;
 USE burgers_db;
 

@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<script src="https://code.jquery.com/jquery.js"></script>
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+		<script src="/assets/js/burgers.js"></script>
+		
+	</head>
+
+
 <h1>Eat Da Burger!</h1>
 
 <img src="../assets/img/burger.jpg" alt="burger" class="center">
@@ -9,11 +22,11 @@
 		<ul>
 			{{#each burger}}
 			{{#unless devour}}
-			<span><h4>{{this.burger_name}}
+			<h4>{{this.burger_name}}
 				<button class="change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
 				DEVOUR!
 				</button>
-				</h4></span>
+				</h4>
 				{{/unless}}
 			{{/each}}
 		</ul>
@@ -33,8 +46,12 @@
 		</div>
 </div>
 
-<form action="/" method="POST">
-	<textarea type="text" name="burger"></textarea>
+<form class="create-form">
+	<div class="form-group">
+	<h4><label for="bg">Burger Name:</label></h4>
+	<input type="text" id="bg" name="burger_name">
+	</div>
+
 
 	<button type="submit" align="right">Submit</button>
 </form>

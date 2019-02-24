@@ -37,14 +37,22 @@ button {
     margin-right: auto;
 }
 
-.create-update-form {
+#bg {
   padding: 5px;
   margin: 5px;
-  background: aqua;
+  background: white;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .form-group {
   margin-bottom: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 body {

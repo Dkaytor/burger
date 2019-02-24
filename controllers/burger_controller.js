@@ -21,7 +21,7 @@ router.post("/api/burgers", function(req, res) {
   burger.insertOne([
     "burger_name", "devour"
   ], [
-    req.body.name, req.body.devour
+    req.body.burger_name, req.body.devour
   ], function(result) {
     res.json({ id: result.insertId});
   });
@@ -35,6 +35,7 @@ router.put("/api/burgers/:id", function(req, res) {
   burger.updateOne({
     devour: req.body.devour
   }, condition, function(result) {
+    console.log("controller check");
     if (result.changedRows == 0) {
       return res.status(404).end();
     } else {

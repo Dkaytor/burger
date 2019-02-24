@@ -61,6 +61,7 @@ var orm = {
             if (err) {
                 throw err;
             }
+            console.log("insert " + result);
             cb(result);
         });
     },

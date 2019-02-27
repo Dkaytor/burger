@@ -29,8 +29,7 @@ $(function () {
 
         var newBurger = {
           name: $("#bg").val().trim(),
-          devour: $("[name=devour]:checked").val()
-        };
+          devour: false };
 
         // Send the POST request.
         $.ajax("/api/burgers", {

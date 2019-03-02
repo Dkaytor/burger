@@ -15,16 +15,17 @@
 
 <img src="../assets/img/burger.jpg" alt="burger" class="center">
 
+<!-- Setting screen so uneaten burgers on left and devoured burgers on right -->
 <div class="row">
 	<div class="col-md-4">
 		<h3>Devour the burger of your choice!</h3>
 
 		<ul>
+			<!-- Cycles through each burger like a for loop -->
 			{{#each burger}}
 			{{#unless devour}}
 			<h4>{{this.burger_name}}
 				<button type="submit" class="change-devour" data-id={{id}}>
-					{{!-- data-newdevour={{devour}} --}}
 				DEVOUR!
 				</button>
 				</h4>
@@ -46,11 +47,15 @@
 
 		</div>
 </div>
-<div class="text-center">
-<form class="create-form">
-
-	<h4><label for="bg">Burger Name:</label></h4>
-	<input type="text" id="bg" name="burger_name">
-	<button class="submit" align="right">Submit</button>
-</form>
+<!-- Section for submission of new burgers -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center enter_section">
+            <form action="api/burgers" method="POST">
+                <input type="text" class="form-control" name="burger_name" value="" id="enter_text">
+                <button type="submit" class="btn btn-primary" id="text-enter-button">Submit</button>
+            </form>
+            <p>Enter a burger you want to eat Click the "Submit" button.</p>
+        </div>
+    </div>
 </div>

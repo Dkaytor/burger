@@ -2,7 +2,8 @@
 var mysql = require("mysql");
 
 //This creates the connection to the local host, my computer
-var connection = mysql.createConnection({
+if (process.env.JAWSDB_URL) { 
+  connection = mysql.createConnection({
     host: "localhost",
 
     // Your port
@@ -15,6 +16,8 @@ var connection = mysql.createConnection({
     password: "jake0104",
     database: "burgers_db"
 });
+
+};
 
 // connect to the mysql server and sql database
 connection.connect(function(err) {

@@ -1,4 +1,3 @@
-
 //Routes to be used
 
 var connection = require("../config/connection.js");
@@ -15,7 +14,6 @@ function printQuestionMarks(num) {
 }
 
 // Helps converting object to sql syntax
-
 function objToSql(ob) {
     var arr = [];
 
@@ -33,6 +31,7 @@ function objToSql(ob) {
     return arr.toString();
 }
 
+//Setting functions to work with SQL
 var orm = {
     selectAll: function (tableInput, cb) {
 

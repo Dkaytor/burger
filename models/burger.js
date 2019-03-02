@@ -1,6 +1,7 @@
 //links to retrieve information from other files
 var orm = require("../config/orm.js");
 
+//Set up of functions to work with SQL database
 var burger = {
   selectAll: function (cb) {
     orm.selectAll("burgers", function (res) {
@@ -8,9 +9,9 @@ var burger = {
     });
   },
 
-  insertOne: function (burger_name) {
+  insertOne: function (burger_name, cb) {
     orm.insertOne("burgers", ["burger_name","devour"], [burger_name, false], function (res) {
-    
+    cb(res);
     });
   },
 

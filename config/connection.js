@@ -2,7 +2,10 @@
 var mysql = require("mysql");
 
 //This creates the connection to the local host, my computer
-if (process.env.JAWSDB_URL) { 
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+ 
+ } else {
   connection = mysql.createConnection({
     host: "localhost",
 
